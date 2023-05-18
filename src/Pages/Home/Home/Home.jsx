@@ -1,9 +1,10 @@
+import BannerPage from "../BannerPage/BannerPage";
 
 
 const Home = () => {
     return (
         <div>
-            <h2>This is home</h2>
+           <BannerPage></BannerPage>
             
         </div>
     );

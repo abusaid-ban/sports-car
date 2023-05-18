@@ -2,7 +2,7 @@ import logo from '../../../assets/logo-removebg-preview.png'
 
 const Footer = () => {
     return (
-        <footer className="footer p-10  bg-blue-200  text-base-content">
+        <footer className="footer p-10  bg-blue-50  text-base-content">
             <div>
               <img src={logo} alt="" />
                 <p>Kids-Gallary Ltd.<br />Providing reliable Kids sports toys since 1992</p>

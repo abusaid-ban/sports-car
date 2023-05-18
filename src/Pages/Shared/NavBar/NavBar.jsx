@@ -11,7 +11,7 @@ const NavBar = () => {
 
     </>
     return (
-        <div className="navbar flex items-center bg-blue-200 h-40 px-4 py-4">
+        <div className="navbar flex items-center bg-blue-50 h-40 px-4 py-4">
             <div className="navbar-start ">
                 <div className="dropdown">
                     <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -32,7 +32,8 @@ const NavBar = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-              <img src="" alt="user profile picture" />
+              {/* <img src="" alt="user profile picture" /> */}
+             <Link to='/login'> <button className="btn bg-red-500">Login</button></Link>
             </div>
         </div>
     );
