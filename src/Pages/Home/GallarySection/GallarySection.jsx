@@ -7,8 +7,9 @@ import cover from '../../../assets/cover2.png'
 const GallarySection = () => {
     return (
        <div   style={{ backgroundImage: `url(${cover})` }}>
-        <div>
-            <h2 className=' py-4 text-center text-5xl text-white bg-slate-500'>Our Latest Includes:</h2>
+        <div className=' py-4 bg-slate-200'>
+            <h3 className=' text-center text-3xl font-bold text-red-300'>Products</h3>
+            <h2 className=' py-4 text-center text-5xl text-orange-500'>Our Latest Includes:</h2>
         </div>
          <div className="carousel w-1/2 mx-auto mt-24">
         <div id="slide1" className="carousel-item relative w-full">
