@@ -11,7 +11,7 @@ const MiniPoliceCar = ({category}) => {
           <p>Price: ${price}</p>
           <p>Ratings:{rating}</p>
           <div className="card-actions justify-end">
-          <Link to='/viewDetails'> <button className="btn bg-red-500">View Details</button></Link>
+          <Link to='/viewDetails'> <button className="btn btn-warning">View Details</button></Link>
            
           </div>
         </div>
