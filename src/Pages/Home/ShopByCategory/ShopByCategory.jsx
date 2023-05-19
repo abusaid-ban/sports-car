@@ -1,16 +1,23 @@
 import { useEffect, useState } from "react";
 import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
+import SportsCar from "./sportsCar";
+import RegularCar from "./RegularCar";
+import MiniPoliceCar from "./MiniPolice";
 
 
 const ShopByCategory = () => {
-    const [categories,setCategories]= useState([]);
+    const [categories, setCategories] = useState([]);
 
-    useEffect(()=>{
-        fetch('category.json')
-        .then(res=> res.json())
-        .then(data => setCategories(data));
-    },[])
+    useEffect(() => {
+        fetch('http://localhost:5000/products')
+            .then(res => res.json())
+            .then(data => setCategories(data));
+    }, [])
+
+
+
+    console.log(categories[0]);
     return (
         <div>
             <div>
@@ -26,19 +33,48 @@ const ShopByCategory = () => {
                     </TabList>
 
                     <TabPanel>
-                        <h2>Any content 1</h2>
-                       
+                        <div className="flex justify-around mb-4">
+                            {
+                                categories[0]?.sportsCar?.map(category =>
+                                    <SportsCar
+                                        key={category.id}
+                                        category={category}
+                                    >
+
+                                    </SportsCar>)
+                            }
+                        </div>
+
                     </TabPanel>
                     <TabPanel>
-                        <h2>Any content 2</h2>
+                    <div className="flex justify-around mb-4">
+                            {
+                                categories[1]?.regularCar?.map(category =>
+                                    <RegularCar
+                                        key={category.id}
+                                        category={category}
+                                    >
+
+                                    </RegularCar>)
+                            }
+                        </div>
                     </TabPanel>
                     <TabPanel>
-                        <h2>Any content 3</h2>
+                    <div className="flex justify-around mb-4">
+                            {
+                                categories[2]?.policeCar?.map(category =>
+                                    <MiniPoliceCar
+                                        key={category.id}
+                                        category={category}
+                                    >
+
+                                    </MiniPoliceCar>)
+                            }
+                        </div>
                     </TabPanel>
                 </Tabs>
             </div>
-            <div> categories: {
-                categories.length}</div>
+
         </div>
     );
 };

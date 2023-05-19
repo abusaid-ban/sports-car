@@ -1,46 +1,56 @@
- [
-      {
-        "id": 1,
-        "picture": "https://i.ibb.co/Zx6C8nB/car-2.jpg",
-        "name": "Super Power Racing Car",
-        "price": 19.99,
-        "rating": 4.5
-      },
-      {
-        "id": 2,
-        "picture": "https://i.ibb.co/YWJx234/car-1.jpg",
-        "name": "Super Giant Car",
-        "price": 14.99,
-        "rating": 4.2
-      },
-      {
-        "id": 3,
-        "picture": "https://i.ibb.co/cFkqPJW/car-4.webp",
-        "name": "Small Family Car",
-        "price": 24.99,
-        "rating": 4.8
-      },
-      {
-        "id": 4,
-        "picture": "https://i.ibb.co/Fhb1Dfh/car-3.webp",
-        "name": "Toyota car",
-        "price": 9.99,
-        "rating": 3.9
-      },
-      {
-        "id": 5,
-        "picture": "https://i.ibb.co/TgW89PY/car-6.jpg",
-        "name": "Police Car",
-        "price": 12.99,
-        "rating": 4.3
-      },
-      {
-        "id": 6,
-        "picture": "https://i.ibb.co/LryM7qD/car-5.jpg",
-        "name": "Operation Police car",
-        "price": 17.99,
-        "rating": 4.6
-      }
-    ]
-  
-  
+[
+    {
+        "sportsCar": [
+            {
+                "id": 1,
+                "picture": "https://i.ibb.co/Zx6C8nB/car-2.jpg",
+                "name": "Super Power Racing Car",
+                "price": 19.99,
+                "rating": 4.5
+            },
+            {
+                "id": 2,
+                "picture": "https://i.ibb.co/YWJx234/car-1.jpg",
+                "name": "Super Giant Car",
+                "price": 14.99,
+                "rating": 4.2
+            }
+        ]
+    },
+    {
+        "regularCar": [
+            {
+                "id": 3,
+                "picture": "https://i.ibb.co/cFkqPJW/car-4.webp",
+                "name": "Small Family Car",
+                "price": 24.99,
+                "rating": 4.8
+            },
+            {
+                "id": 4,
+                "picture": "https://i.ibb.co/Fhb1Dfh/car-3.webp",
+                "name": "Toyota car",
+                "price": 9.99,
+                "rating": 3.9
+            }
+        ]
+    },
+    {
+        "policeCar": [
+            {
+                "id": 5,
+                "picture": "https://i.ibb.co/TgW89PY/car-6.jpg",
+                "name": "Police Car",
+                "price": 12.99,
+                "rating": 4.3
+            },
+            {
+                "id": 6,
+                "picture": "https://i.ibb.co/LryM7qD/car-5.jpg",
+                "name": "Operation Police car",
+                "price": 17.99,
+                "rating": 4.6
+            }
+        ]
+    }
+]
