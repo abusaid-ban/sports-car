@@ -1,13 +1,32 @@
 import { Link } from "react-router-dom";
 import logo from '../../../assets/logo-removebg-preview.png'
+import { useContext } from "react";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const NavBar = () => {
+    const {user,logOut} = useContext(AuthContext);
+    // console.log(user);
+
+    const handleLogOut=()=>{
+        logOut()
+        .then(()=>{})
+        .catch(error => console.log(error))
+
+    }
+
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/allToys'>All Toys</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
-        <li><Link to='/mytoys'>My Toys</Link></li>
+       { user?.email?
+       <div className="flex">
+         <li><Link to='/myToys'>My Toys</Link></li>
         <li><Link to='/addToys'>Add a Toys</Link></li>
+        <li><img className="bg-orange-500 w-6 h-6 rounded-full " src={user.photoURL} alt="dp" /></li>
+        <li className="navbar-end"><button onClick={handleLogOut}>Log Out</button></li>
+       </div>
+        : <li><Link to='/login' > <button className="btn bg-red-500">Login</button></Link></li>
+        }
 
     </>
     return (
@@ -34,7 +53,7 @@ const NavBar = () => {
             </div>
             <div className="navbar-end">
               {/* <img src="" alt="user profile picture" /> */}
-             <Link to='/login'> <button className="btn bg-red-500">Login</button></Link>
+             {/* <Link to='/login'> <button className="btn bg-red-500">Login</button></Link> */}
             </div>
         </div>
     );

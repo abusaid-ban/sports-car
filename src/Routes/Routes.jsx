@@ -11,46 +11,53 @@ import AllToys from "../Pages/Home/AllToys/AllToys";
 import ViewDetails from "../Pages/Home/ViewDetails/ViewDetails";
 import ToyDetails from "../Pages/Home/ToyDetails/ToyDetails";
 import AddToy from "../Pages/Home/AddToy/AddToy";
+import MyToys from "../Pages/Home/MyToys/MyToys";
+import PrivateRoutes from "./PrivateRoutes";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
-        children:[
+        children: [
             {
-                path:'/',
-                element:<Home></Home>
+                path: '/',
+                element: <Home></Home>
             },
             {
-                path:'/login',
-                element:<Login></Login>
+                path: '/login',
+                element: <Login></Login>
             },
             {
-                path:'/register',
-                element:<Register></Register>
+                path: '/register',
+                element: <Register></Register>
             },
             {
-                path:'/blogs',
-                element:<Blog></Blog>
+                path: '/blogs',
+                element: <Blog></Blog>
             },
             {
-                path:'/allToys',
-                element:<AllToys></AllToys>
+                path: '/allToys',
+                element: <AllToys></AllToys>
             },
             {
-                path:'/addToys',
-                element:<AddToy></AddToy>,
-                loader:()=>fetch('http://localhost:5000/products')
+                path: '/addToys',
+                element: <AddToy></AddToy>,
+                loader: () => fetch('http://localhost:5000/products')
             },
             {
-                path:'/viewDetails/:id',
-                element:<ViewDetails></ViewDetails>,
-                loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+                path: '/viewDetails/:id',
+                element: <ViewDetails></ViewDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
             },
             {
-                path:'/toyDetails/:id',
-                element:<ToyDetails></ToyDetails>,
-                loader:({params})=>fetch(`http://localhost:5000/products/${params.id}`)
+                path: '/toyDetails/:id',
+                element: <ToyDetails></ToyDetails>,
+                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+            },
+            {
+                path: '/myToys',
+                element: <PrivateRoutes><MyToys></MyToys></PrivateRoutes>,
+
             }
         ]
     },
@@ -58,7 +65,7 @@ const router = createBrowserRouter([
         path: "/*",
         element: <ErrorPage />,
         // errorElement: <ErrorPage />,
-      }
+    }
 ]);
 
 export default router;
