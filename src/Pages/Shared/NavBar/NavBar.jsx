@@ -4,7 +4,7 @@ import logo from '../../../assets/logo-removebg-preview.png'
 const NavBar = () => {
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
-        <li><Link to='/alltoys'>All Toys</Link></li>
+        <li><Link to='/allToys'>All Toys</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
         <li><Link to='/mytoys'>My Toys</Link></li>
         <li><Link to='/addatoys'>Add a Toys</Link></li>
