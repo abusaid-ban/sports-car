@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
 
-const RegularCar = ({category}) => {
-    const {picture,name,price,rating} = category;
+const RegularCar = ({car}) => {
+    const {picture,name,price,rating} = car;
     return (
         <div className="card card-compact w-96 bg-base-100 shadow-xl">
         <figure><img src={picture} alt="Shoes" /></figure>

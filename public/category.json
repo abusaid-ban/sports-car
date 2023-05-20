@@ -1,56 +1,74 @@
 [
     {
-        "sportsCar": [
-            {
-                "id": 1,
-                "picture": "https://i.ibb.co/Zx6C8nB/car-2.jpg",
-                "name": "Super Power Racing Car",
-                "price": 19.99,
-                "rating": 4.5
-            },
-            {
-                "id": 2,
-                "picture": "https://i.ibb.co/YWJx234/car-1.jpg",
-                "name": "Super Giant Car",
-                "price": 14.99,
-                "rating": 4.2
-            }
-        ]
+        "category_id": "1",
+        "sub_category":"Sports Car",
+        "picture": "https://i.ibb.co/Zx6C8nB/car-2.jpg",
+        "name": "Super Power Racing Car",
+        "seller_name":"Abdul Hakim",
+        "seller_email":"abdul@hakim.com",
+        "quantity":"122",
+        "price": "19.99",
+        "rating":" 4.5",
+        "description":"Super racing car is so strong and reasonable at price."
     },
     {
-        "regularCar": [
-            {
-                "id": 3,
-                "picture": "https://i.ibb.co/cFkqPJW/car-4.webp",
-                "name": "Small Family Car",
-                "price": 24.99,
-                "rating": 4.8
-            },
-            {
-                "id": 4,
-                "picture": "https://i.ibb.co/Fhb1Dfh/car-3.webp",
-                "name": "Toyota car",
-                "price": 9.99,
-                "rating": 3.9
-            }
-        ]
+        "category_id": "1",
+        "sub_category":"Sports Car",
+        "picture": "https://i.ibb.co/YWJx234/car-1.jpg",
+        "name": "Super Giant Car",
+        "seller_name":"Abdul Hamid",
+        "seller_email":"hamid@abdul.com",
+        "quantity":"102",
+        "price": "33.93",
+        "rating":" 5.7",
+        "description":"Super Giant Car is so strong and reasonable at price."
     },
     {
-        "policeCar": [
-            {
-                "id": 5,
-                "picture": "https://i.ibb.co/TgW89PY/car-6.jpg",
-                "name": "Police Car",
-                "price": 12.99,
-                "rating": 4.3
-            },
-            {
-                "id": 6,
-                "picture": "https://i.ibb.co/LryM7qD/car-5.jpg",
-                "name": "Operation Police car",
-                "price": 17.99,
-                "rating": 4.6
-            }
-        ]
+        "category_id": "2",
+        "sub_category":"Regular Car",
+        "picture": "https://i.ibb.co/cFkqPJW/car-4.webp",
+        "name": "Small Family Car",
+        "seller_name":"Mahbub Hasan",
+        "seller_email":"mahbub@hasan.com",
+        "quantity":"82",
+        "price": "23.43",
+        "rating":" 6.5",
+        "description":"Small Family Car is so strong and reasonable at price."
+    },
+    {
+        "category_id": "2",
+        "sub_category":"Regular Car",
+        "picture": "https://i.ibb.co/Fhb1Dfh/car-3.webp",
+        "name": "Toyota car",
+        "seller_name":"Wasim Younus",
+        "seller_email":"younus@khan.com",
+        "quantity":"222",
+        "price": "12.50",
+        "rating":" 7.6",
+        "description":"Toyota car is so strong and reasonable at price."
+    },
+    {
+        "category_id": "3",
+        "sub_category":"Mini Police Car",
+        "picture": "https://i.ibb.co/TgW89PY/car-6.jpg",
+        "name": "Police Car",
+        "seller_name":"Sofiqul hasan",
+        "seller_email":"hasan@shofiqul.com",
+        "quantity":"72",
+        "price": "34.40",
+        "rating":" 9.6",
+        "description":"Police Car is so strong and reasonable at price."
+    },
+    {
+        "category_id": "3",
+        "sub_category":"Mini Police Car",
+        "picture": "https://i.ibb.co/LryM7qD/car-5.jpg",
+        "name": "Operation Police car",
+        "seller_name":"Mehedi Hasan",
+        "seller_email":"hasan@mehedi.com",
+        "quantity":"34",
+        "price": "21.77",
+        "rating":" 5.6",
+        "description":" Operation Police Car is so strong and reasonable at price."
     }
 ]

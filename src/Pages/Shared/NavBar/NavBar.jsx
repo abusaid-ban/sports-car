@@ -24,6 +24,7 @@ const NavBar = () => {
                 <Link to='/'>
                     <img src={logo} alt="" />
                 </Link>
+                <h2>Kids Gallary</h2>
 
             </div>
             <div className="navbar-center hidden lg:flex">
