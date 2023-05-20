@@ -7,7 +7,7 @@ const NavBar = () => {
         <li><Link to='/allToys'>All Toys</Link></li>
         <li><Link to='/blogs'>Blogs</Link></li>
         <li><Link to='/mytoys'>My Toys</Link></li>
-        <li><Link to='/addatoys'>Add a Toys</Link></li>
+        <li><Link to='/addToys'>Add a Toys</Link></li>
 
     </>
     return (
