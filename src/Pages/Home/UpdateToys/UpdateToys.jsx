@@ -3,31 +3,29 @@ import { useLoaderData } from "react-router-dom";
 
 const UpdateToys = () => {
     const update = useLoaderData();
-    const { price, quantity, details } = update;
+    const {_id, price, quantity, details } = update;
 
     const handleUpdateToys = (event) => {
         event.preventDefault();
         const form = event.target;
-
-
         const price = form.price.value;
         const quantity = form.quantity.value;
         const details = form.details.value;
-        const NewToys = { price, quantity, details }
-        console.log(NewToys);
+        const UpdatedToys = { price, quantity, details }
+        console.log(UpdatedToys);
 
-        fetch('http://localhost:5000/products', {
-            method: 'POST',
+        fetch(`http://localhost:5000/myToys/${_id}`, {
+            method: 'PUT',
             headers: {
                 "content-type": "application/json"
             },
-            body: JSON.stringify(NewToys)
+            body: JSON.stringify(UpdatedToys)
 
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.insertedId) {
+                if (data.modifiedCount > 0 ) {
                     alert('New Toys Updated Successfully')
                 }
             })
