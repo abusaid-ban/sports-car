@@ -6,12 +6,13 @@ import NewAddedtoys from "./NewAddedtoys";
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [newToys, setNewToys] = useState([]);
-    const url = `http://localhost:5000/products?email=${user?.email}`
+    
+    
     useEffect(() => {
-        fetch(url)
+        fetch( `http://localhost:5000/myToys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setNewToys(data))
-    }, [])
+    }, [user])
     return (
         <div>
             <div className="overflow-x-auto w-full">
