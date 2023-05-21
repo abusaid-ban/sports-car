@@ -9,14 +9,14 @@ const MyToys = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/myToys?email=${user?.email}`)
+        fetch(`https://sports-toys-phero-server.vercel.app/myToys?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setNewToys(data))
     }, [user])
     const handleDelete = id =>{
         const proceed = confirm('Are you sure want to delete?');
         if(proceed){
-            fetch(`http://localhost:5000/myToys/${id}`,{
+            fetch(`https://sports-toys-phero-server.vercel.app/myToys/${id}`,{
                 method:"DELETE"
                
             })

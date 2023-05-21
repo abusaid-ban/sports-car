@@ -13,7 +13,7 @@ const ShopByCategory = () => {
     const [policeCars,setPoliceCars]= useState(null);
 
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://sports-toys-phero-server.vercel.app/products')
             .then(res => res.json())
             .then(data => setCategories(data));
     }, [])

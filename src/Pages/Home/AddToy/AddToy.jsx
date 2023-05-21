@@ -20,7 +20,7 @@ const AddToy = () => {
        const NewToys = {photo,name,seller_name,email,sub_category,price,rating,quantity,details}
        console.log(NewToys);
 
-       fetch('http://localhost:5000/products',{
+       fetch('https://sports-toys-phero-server.vercel.app/products',{
         method:'POST',
         headers:{
             "content-type":"application/json"

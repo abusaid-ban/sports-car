@@ -14,7 +14,7 @@ const UpdateToys = () => {
         const UpdatedToys = { price, quantity, details }
         console.log(UpdatedToys);
 
-        fetch(`http://localhost:5000/myToys/${_id}`, {
+        fetch(`https://sports-toys-phero-server.vercel.app/myToys/${_id}`, {
             method: 'PUT',
             headers: {
                 "content-type": "application/json"

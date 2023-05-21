@@ -43,17 +43,17 @@ const router = createBrowserRouter([
             {
                 path: '/addToys',
                 element: <AddToy></AddToy>,
-                loader: () => fetch('http://localhost:5000/products')
+                loader: () => fetch('https://sports-toys-phero-server.vercel.app/products')
             },
             {
                 path: '/viewDetails/:id',
                 element: <ViewDetails></ViewDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://sports-toys-phero-server.vercel.app/products/${params.id}`)
             },
             {
                 path: '/toyDetails/:id',
                 element: <ToyDetails></ToyDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                loader: ({ params }) => fetch(`https://sports-toys-phero-server.vercel.app/products/${params.id}`)
             },
             {
                 path: '/myToys',
@@ -63,7 +63,7 @@ const router = createBrowserRouter([
             {
                 path: "/updateToys/:id",
                 element:<UpdateToys></UpdateToys> ,
-                loader:({params})=>fetch(`http://localhost:5000/myToys/${params.id}`)
+                loader:({params})=>fetch(`https://sports-toys-phero-server.vercel.app/myToys/${params.id}`)
 
             }
         ]

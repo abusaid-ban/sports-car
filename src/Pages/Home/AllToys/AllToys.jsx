@@ -6,7 +6,7 @@ import SearchItems from "./SearchItems";
 const AllToys = () => {
     const [allToys, setAllToys] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://sports-toys-phero-server.vercel.app/products')
             .then(res => res.json())
             .then(data => setAllToys(data))
     }, [])
