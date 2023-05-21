@@ -4,6 +4,8 @@ import 'react-tabs/style/react-tabs.css';
 import SportsCar from "./sportsCar";
 import RegularCar from "./RegularCar";
 import MiniPoliceCar from "./MiniPolice";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 
 const ShopByCategory = () => {
@@ -16,6 +18,10 @@ const ShopByCategory = () => {
         fetch('https://sports-toys-phero-server.vercel.app/products')
             .then(res => res.json())
             .then(data => setCategories(data));
+            Aos.init({
+                duration: 800,
+                delay: 200,
+              })
     }, [])
 
     const handleSportsCar = (id) => {
@@ -38,7 +44,7 @@ const ShopByCategory = () => {
     return (
         <div>
             <div>
-                <h2 className=' py-4 text-center text-5xl text-orange-500'>Shop By Category</h2>
+                <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" className=' py-4 text-center text-5xl text-orange-500'>Shop By Category</h2>
 
             </div>
             <div>
