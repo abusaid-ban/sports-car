@@ -35,26 +35,7 @@ const MyToys = () => {
         }
 
     }
-    // const handleUpdate = id =>{
-    //     fetch(`http://localhost:5000/myToys/${id}`,{
-    //         method:"PATCH",
-    //         headers:{
-    //             "content-type":"application/json"
-    //         },
-    //         body:JSON.stringify({status:'confirm'})
-           
-    //     })
-    //     .then(res=>res.json())
-    //     .then(data=>{
-    //         console.log(data);
-    //         if(data.modifiedCount > 0){
-    //             alert('Updated Successful');
-
-    //         }
-
-    //     })
-
-    // }
+  
     return (
         <div>
             <div className="overflow-x-auto w-full">
@@ -79,7 +60,7 @@ const MyToys = () => {
                                 key={toys._id}
                                 toys={toys}
                                 handleDelete={handleDelete}
-                                // handleUpdate={handleUpdate}
+                              
                             ></NewAddedtoys>)
                         }
 
